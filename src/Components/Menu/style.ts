@@ -8,12 +8,12 @@ export const MenuContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: solid 2px green;
+    border: solid 0px green;
     height: 60px;
 `;  
 
 export const MenuSide = styled.div<SideProps>`
-    border: solid 2px blue;
+    border: solid 0px blue;
     display: flex;
     flex-direction: row;
     align-items: center;
