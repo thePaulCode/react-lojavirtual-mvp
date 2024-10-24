@@ -7,7 +7,7 @@ type BotaoType = {
 
 export const Botao = styled.button<BotaoType>`
 
-    display: flex ;
+    display: flex;
     justify-content: ${(props)=>props.botao === true? 'flex-end' : 'flex-start'};
     align-items: center;
     height: 28px;
@@ -21,6 +21,9 @@ export const Botao = styled.button<BotaoType>`
     cursor: pointer;    
     transition: 0.5s;
 
+    padding: 0;
+   
+
 `;
 
 export const BotaoContainer = styled.div<BotaoType>`
@@ -29,6 +32,7 @@ export const BotaoContainer = styled.div<BotaoType>`
     justify-content: ${(props)=>props.botao === true? 'flex-end' : 'flex-start'};
     align-items: center;
     transition: 0.5s;
+  
     
 
 `;
@@ -38,15 +42,13 @@ export const Circulo = styled.div<BotaoType>`
     align-items: center;
     flex-direction: row;
     justify-content: ${(props)=>props.botao === true? 'flex-end' : 'flex-start'};
-    height: 28px;
-    width: 28px;
+    height: 27px;
+    width: 27px;
     border-radius: 100%;
     background-color: red;
     z-index: 9999;
     cursor: pointer;
-   padding: 0;
-   margin: 0;
-    border: 0;
+   
     
     transition: 0.5s;
 
