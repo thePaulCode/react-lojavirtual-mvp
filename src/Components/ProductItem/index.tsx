@@ -9,7 +9,12 @@ import {
 } from "./style";
 import Button from "../Button";
 
-function ProductItem() {
+interface ProductItemProps {
+  product?: any;
+}
+
+function ProductItem({product}: any) {
+  const principalSize = product.tamanhos.find((tamanho: any)=>tamanho.principal);
   return (
     <>
       
@@ -19,11 +24,11 @@ function ProductItem() {
           <Button>Adicionar ao carrinho</Button>
         </ContainerButton>
       </Card>
-        <ProductName>Camiseta RW</ProductName>
+        <ProductName>{product.nome}</ProductName>
         <ContainerProductPrice>
-          <ProductPrice fake={true}>R$ 69,90</ProductPrice>
+          <ProductPrice fake={true}>{principalSize? principalSize.preco_de.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) : ''}</ProductPrice>
 
-          <ProductPrice>R$ 49,90</ProductPrice>
+          <ProductPrice>{principalSize? principalSize.preco_por.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) : ''}</ProductPrice>
         </ContainerProductPrice>
       </ContainerInfosProduct>
     </>
