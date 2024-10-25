@@ -16,15 +16,14 @@ interface ProductItemProps {
 function ProductItem({product}: any) {
   const principalSize = product.tamanhos.find((tamanho: any)=>tamanho.principal);
   return (
-    <>
-      
+    <>      
       <ContainerInfosProduct>
       <Card>
         <ContainerButton>
           <Button>Adicionar ao carrinho</Button>
         </ContainerButton>
       </Card>
-        <ProductName>{product.nome}</ProductName>
+        <ProductName>{product.nome} </ProductName>
         <ContainerProductPrice>
           <ProductPrice fake={true}>{principalSize? principalSize.preco_de.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) : ''}</ProductPrice>
 
