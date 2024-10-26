@@ -5,17 +5,23 @@ type ProductPriceProps = {
     fake?: boolean;
 }
 
-export const Card = styled.div`
+type CardImageProps = {
+    backGroundImage?: string;
+}
+
+export const Card = styled.div<CardImageProps>`
 
     border: solid 0px red;
+    background-image: url(${(props)=>props.backGroundImage});
     display: flex;    
     flex-direction: column;
     justify-content: flex-end;
-    height: 500px;
+    height: 450px;
     width: 250px;
     border-radius: 25px;
     background-color: gray;
     padding-bottom: 20px;
+    text-decoration: none;
 
 
 `;
@@ -29,9 +35,10 @@ export const ContainerButton = styled.div`
 export const ProductName = styled.div`
     font-family: 'gilroy-regular';
     font-size: 20px;
-    color: #43BC2F;
+    /* color: #43BC2F; */
+    color: black;
     margin-top: 10px;;
-
+    text-decoration: none;
 
 `;
 
@@ -46,7 +53,7 @@ export const ProductPrice = styled.div<ProductPriceProps>`
 
     text-decoration: ${(props)=>props.fake === true? 'line-through' : ''};
     font-family: 'gilroy-regular';
-    color: #43BC2F;
+    color: black;
 
 `;
 

@@ -34,5 +34,5 @@ export const MenuItem = styled.div`
     align-items: center;
     gap: 20px;
     font-family: 'gilroy-bold';
-    color: #43BC2F;
+    color: black;
 `;

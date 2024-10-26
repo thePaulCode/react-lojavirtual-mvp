@@ -17,7 +17,7 @@ export const Titulo = styled.div`
 
     font-family: 'gilroy-bold';
     font-size: 20px;
-    color: #43BC2F;
+    color: black;
     margin-top: 40px;
 `;
 

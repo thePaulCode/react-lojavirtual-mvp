@@ -43,7 +43,7 @@ const Home = () => {
       </Container>
       <br>
       </br>
-      {/* <Cart /> */}
+      {/* <Cart />  */}
     </>
   );
 };

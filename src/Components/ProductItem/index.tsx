@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Card,
   ContainerButton,
@@ -16,9 +17,9 @@ interface ProductItemProps {
 function ProductItem({product}: any) {
   const principalSize = product.tamanhos.find((tamanho: any)=>tamanho.principal);
   return (
-    <>      
+    <Link to={`/produto/${product.id}`}>      
       <ContainerInfosProduct>
-      <Card>
+      <Card backGroundImage={product.fotos[0]}>
         <ContainerButton>
           <Button>Adicionar ao carrinho</Button>
         </ContainerButton>
@@ -30,7 +31,7 @@ function ProductItem({product}: any) {
           <ProductPrice>{principalSize? principalSize.preco_por.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) : ''}</ProductPrice>
         </ContainerProductPrice>
       </ContainerInfosProduct>
-    </>
+    </Link>
   );
 }
 
