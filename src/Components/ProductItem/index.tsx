@@ -17,7 +17,7 @@ interface ProductItemProps {
 function ProductItem({product}: any) {
   const principalSize = product.tamanhos.find((tamanho: any)=>tamanho.principal);
   return (
-    <Link to={`/produto/${product.id}`}>      
+    <Link to={`/product/${product.id}`}>      
       <ContainerInfosProduct>
       <Card backGroundImage={product.fotos[0]}>
         <ContainerButton>

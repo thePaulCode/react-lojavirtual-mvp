@@ -7,12 +7,19 @@ import {
     Link
 } from 'react-router-dom';
 import Home from "./Pages/Home";
+import Product  from "./Pages/Product";
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: (
-      <Home />
+      <Home />  
+    )
+  },
+  {
+    path: '/product/:id',
+    element: (
+      <Product />
     )
   }
 ]);

@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
+type ButtonProps = {
 
+    widthButton?: string;
+    marginTop?: string;
+}
 
-export const Button = styled.button`
+export const Button = styled.button<ButtonProps>`
     
     padding: 15px 30px;
     border: 0;
@@ -12,6 +16,7 @@ export const Button = styled.button`
     font-family: 'gilroy-bold';
     font-size: 13px;
     cursor: pointer;
-
+    margin-top: ${(props)=>props.marginTop? props.marginTop : ''};
+    width: ${(props)=>props.widthButton? props.widthButton : ''};
 `;
 
